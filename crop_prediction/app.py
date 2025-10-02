@@ -3,17 +3,11 @@ import numpy as np
 from flask import Flask, request, render_template
 import pickle
 
-# This line is now 100% correct for your project structure.
-# It tells Flask to find HTML/CSS inside your 'website' folder.
 app = Flask(__name__, template_folder='website', static_folder='website')
-
-# This line is now 100% correct. It tells the app to find the model
-# inside your 'ML_model' folder.
 model_path = os.path.join(os.path.dirname(__file__), 'ML_model', 'crop_prediction.pkl')
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
 
-# The routes now use 'app' which matches the standard Render command.
 @app.route('/')
 def home():
     return render_template('index.html')
