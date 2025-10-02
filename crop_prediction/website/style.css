@@ -1,34 +1,65 @@
-body{
-    background-image:url('image.jpg');
-    background-size:cover;
-    background-repeat:no-repeat;
-    height:100vh;
-    margin-top:100px;
-    margin-left: 450px;
-    margin-right: 100px;
-    margin-bottom: 100px;
-    padding:0;
-}
-input{
-    width: 70%;
-    padding: 15px 100px;
-    color: rgb(66, 63, 63);
-    margin:  6px ;
+
+* {
     box-sizing: border-box;
-    border-bottom: 2px solid black;
+    margin: 0;
+    padding: 0;
 }
-button{
-    background-color: rgb(200, 113, 7);
-    margin: auto;
-    color: black;
-    padding: 18px 100px;
+
+body {
+    background-image: url('image.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+h1 {
     text-align: center;
-    text-decoration: none;
-    display:inline-block;
-    font-size: 16px;
-    margin-left: 160px;
+    color: #333;
+    margin-bottom: 20px;
 }
-#predict{
-    margin-left: 155px;
+
+.login {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%; 
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+input, button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: rgb(200, 113, 7);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(220, 133, 27);
+}
+
+#predict {
+    margin-top: 20px;
     color: rgb(39, 37, 37);
+    font-weight: bold;
+    text-align: center;
 }
