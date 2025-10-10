@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop prediction model</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Crop prediction model</h1>
     <div class="login">
     <form action="{{ url_for('predict') }}" method="post">
-            <input type="text" name="N" placeholder="Nitrogen content in soil" required="required"><br><br>
-            <input type="text" name="P" placeholder="Phosphorus content in soil" required="required"><br><br>
-            <input type="text" name="K" placeholder="Potassium content in soil" required="required"><br><br>
-            <input type="text" name="temperature" placeholder="Temperature in Celsius" required="required"><br><br>
-            <input type="text" name="humidity" placeholder="humidity in the air" required="required"><br><br>
-            <input type="text" name="ph" placeholder="ph level of the soil" required="required"><br><br>
-            <input type="text" name="Rainfall" placeholder="rainfall in cm " required="required"><br><br>
+            <input type="text" name="N" placeholder="Nitrogen content in soil" required="required">
+            <input type="text" name="P" placeholder="Phosphorus content in soil" required="required">
+            <input type="text" name="K" placeholder="Potassium content in soil" required="required">
+            <input type="text" name="temperature" placeholder="Temperature in Celsius" required="required">
+            <input type="text" name="humidity" placeholder="humidity in the air" required="required">
+            <input type="text" name="ph" placeholder="ph level of the soil" required="required">
+            <input type="text" name="Rainfall" placeholder="rainfall in cm " required="required">
             <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
         </form>
     {% if prediction_text %}
